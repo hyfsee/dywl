@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+		<link href="https://res.wx.qq.com/open/libs/weui/2.3.0/weui.css" rel="stylesheet">
+		<link href="https://res.wx.qq.com/open/libs/weui/2.3.0/weui.min.css" rel="stylesheet">
+		<script src="js/index.js"></script> 
+		<link href="css/index.css" rel="stylesheet">
+		<script type="text/javascript">
+		function disable()
+		  {
+		  document.getElementById("accept").disabled=true
+		  }
+		function enable()
+		  {
+		  document.getElementById("accept").disabled=false
+		  }
+		</script>
+			   <title>鼎音物联</title>
+	</head>
+	     <body>
+			 <div class="logo"><img src="img/a.png" width="100%"></div>
+			 <h2 class="logo1">用户须知</h2>
+			 <hr>
+			 <div class="main">
+				<p><i class="weui-icon-info weui-icon_msg"></i>纯流量卡仅提供数据服务，语音，短信功能暂不支持！</p>
+				<p><i class="weui-icon-info weui-icon_msg"></i>此卡片仅提供大陆（不包含<a href="https://www.baidu.com" target="_blank">高危地区</a>）不支持港澳台地区！</p>
+				<p><i class="weui-icon-info weui-icon_msg"></i>配合运营商要求凡我处卡片需填写真实信息进行登记！</p>
+				<p><i class="weui-icon-info weui-icon_msg"></i>严禁卡片销售高危地区，一经发现，销卡处理及追责！</p>
+				<p><i class="weui-icon-info weui-icon_msg"></i>套餐有效期为30天，可跨月使用，到期清零，不可转存！</p>
+				<p><i class="weui-icon-info weui-icon_msg"></i>本系统支持中国联通，中国电信，中国移动！</p>
+				<form action="login.html" >
+				<p class="radio"><input type="checkbox" onclick="if(this.checked){enable()} else {disable()}">我已详情阅读以上风险及须知，并遵守以上服务!</input></p>
+			   <input type="submit" id="accept"  class="weui-btn weui-btn_primary" style="margin: 10px 0 0 0;" disabled="true" value="前往营业大厅"></input>
+			   </form>
+			 </div>
+			
+		 </body>
+</html>
