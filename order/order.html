@@ -6,54 +6,45 @@
 		<link href="https://res.wx.qq.com/open/libs/weui/2.3.0/weui.css" rel="stylesheet">
 		<link href="https://res.wx.qq.com/open/libs/weui/2.3.0/weui.min.css" rel="stylesheet"> 
 		<script src="../js/jquery.js"></script> 
+		<script src="../js/example.js"></script> 
+		<script src="../js/zepto.min.js"></script> 
 		<link href="../css/index.css" rel="stylesheet">
+		<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+		<script src="https://res.wx.qq.com/open/libs/weuijs/1.2.1/weui.min.js"></script>
 		 <title>订购套餐</title>
 	</head>
 	     <body>
 			<!-- 主图 -->
 				 <div class="logo"><img src="../img/a.png" width="100%"></div>
+				 <center><h2>在下方选择用户码操作</h2></center>
 		<div class="page">
 		  <div class="weui-form">
-		    <div class="weui-form__text-area">
-		      <h2 class="weui-form__title">模拟选择框</h2>
-		      <div class="weui-form__desc">用于丰富原生选择框结构，使其更具有扩展性</div>
-		    </div>
-		    <div class="weui-form__control-area">
+		   
 		      <div class="weui-cells__group weui-cells__group_form">
 		        <div class="weui-cells">
-		          <div class="weui-cell weui-cell_active weui-cell_access" id="showDatePicker">
-		            <div class="weui-cell__bd">日期</div>
-		            <div class="weui-cell__ft"></div>
+		          <div class="weui-cell weui-cell_active weui-cell_access" id="showPhone">
+		            <div class="weui-cell__bd">操作用户码</div>
+		            <div class="weui-cell__ft">14302220470</div>
 		          </div>
-		          <div class="weui-cell weui-cell_active weui-cell_access weui-cell_select weui-cell_select-before">
-		            <div class="weui-cell__hd" id="showPhone"><label class="weui-label">+86</label></div>
-		            <div class="weui-cell__bd">
-		              <input class="weui-input" type="number" pattern="[0-9]*" placeholder="请输入号码" value="12345678907"/>
-		            </div>
-		          </div>
-		          <div class="weui-cell weui-cell_active weui-cell_access weui-cell_select weui-cell_select-after">
-		            <div class="weui-cell__hd"><label class="weui-label">票种</label></div>
-		            <div class="weui-cell__bd" id="showPicker">的士票</div>
-		          </div>
+		          
 		        </div>
 		      </div>
 		    </div>
 		  </div>
-		</div>
 
 		<script type="text/javascript">
 		    $('#showPhone').on('click', function () {
 		        weui.picker([{
-		            label: '+86',
+		            label: '14302220741',
 		            value: 0
 		        }, {
-		            label: '+80',
+		            label: '14302220742',
 		            value: 1
 		        }, {
-		            label: '+84',
+		            label: '14302220743',
 		            value: 2
 		        }, {
-		            label: '+87',
+		            label: '14302220744',
 		            value: 3
 		        }], {
 		            onChange: function (result) {
@@ -62,49 +53,10 @@
 		            onConfirm: function (result) {
 		                console.log(result);
 		            },
-		            title: '单列选择器'
+		            title: '上线滑动选择用户码'
 		        });
 		    });
-		    $('#showPicker').on('click', function () {
-		        weui.picker([{
-		            label: '飞机票',
-		            value: 0
-		        }, {
-		            label: '火车票',
-		            value: 1
-		        }, {
-		            label: '的士票',
-		            value: 2
-		        },{
-		            label: '公交票 (disabled)',
-		            disabled: true,
-		            value: 3
-		        }, {
-		            label: '其他',
-		            value: 4
-		        }], {
-		            onChange: function (result) {
-		                console.log(result);
-		            },
-		            onConfirm: function (result) {
-		                console.log(result);
-		            },
-		            title: '单列选择器'
-		        });
-		    });
-		    $('#showDatePicker').on('click', function () {
-		        weui.datePicker({
-		            start: 1990,
-		            end: new Date().getFullYear(),
-		            onChange: function (result) {
-		                console.log(result);
-		            },
-		            onConfirm: function (result) {
-		                console.log(result);
-		            },
-		            title: '多列选择器'
-		        });
-		    });
+		  
 		</script>
 	
 		 </body>
