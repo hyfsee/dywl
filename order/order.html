@@ -16,91 +16,134 @@
 	</head>
 	     <body>
 			<!-- 主图 -->
-				 <div class="logo"><img src="../img/a.png" width="100%"></div>
-				 <center><h2>在下方选择用户码操作</h2></center>
+				 <div class="logo"><img src="../img/a.png" width="90%"></div>
+				
 		<div class="page">
-		  <div class="weui-form">
-		   
 		      <div class="weui-cells__group weui-cells__group_form">
 		        <div class="weui-cells">
 		          <div class="weui-cell weui-cell_active weui-cell_access" id="showPhone">
-		            <div class="weui-cell__bd">操作用户码</div>
-		            <div class="weui-cell__ft">14302220470</div>
-		          </div>
-		          
+		            <div class="weui-cell__bd">请选择你的用户码</div>
+		            <div class="weui-cell__ft" id="result"></div>
 		        </div>
 		      </div>
 		    </div>
 		  </div>
-
-		<script type="text/javascript">
-		    $('#showPhone').on('click', function () {
-		        weui.picker([{
-		            label: '14302220741',
-		            value: 0
-		        }, {
-		            label: '14302220742',
-		            value: 1
-		        }, {
-		            label: '14302220743',
-		            value: 2
-		        }, {
-		            label: '14302220744',
-		            value: 3
-		        }], {
-		            onChange: function (result) {
-		                console.log(result);
-		            },
-		            onConfirm: function (result) {
-		                console.log(result);
-		            },
-		            title: '上线滑动选择用户码'
-		        });
-		    });
+		  <div style="margin:1.25rem 0 1.25rem 1.875rem">
+			<!-- 月套餐 -->
+		<p><b>超值月包</b> <span style="font-size: 8px;">到账后生效，30天有效期,可跨月</span></p>
+	
+		<div class="orderb"><a href="http://www.baidu.com">
+			<div class="a1">20GB</div>
+			<div class="a2">12.00元</div>
+		</a></div>
+		<div class="orderb"><a href="http://www.baidu.com">
+			<div class="a1">40GB</div>
+			<div class="a2">14.00元</div>
+		</div> 
+		<div class="orderb"><a href="http://www.baidu.com">
+			<div class="a1">60GB</div>
+			<div class="a2">16.00元</div>
+		</a></div> 
+		<div class="orderb"><a href="http://www.baidu.com">
+			<div class="a1">80GB</div>
+			<div class="a2">18.00元</div>
+		</a></div>
+		<div class="orderb"><a href="http://www.baidu.com">
+			<div class="a1">100GB</div>
+			<div class="a2">19.00元</div>
+		</div> 
+		<div class="orderb"><a href="http://www.baidu.com">
+			<div class="a1">150GB</div>
+			<div class="a2">25.00元</div>
+		</a></div> 
+		  </div>
+		 <!-- 季度包 -->
+		  <div style="margin:1.25rem 0 1.25rem 1.875rem">
+		  	
+		  <p><b>超值季度包</b> <span style="font-size: 8px;">到账后90有效，可跨月</span></p>
+		  	
+		 <div class="orderb"><a href="http://www.baidu.com">
+		 	<div class="a1">20GB</div>
+		 	<div class="a2">36.00元</div>
+		 </a></div>
+		 <div class="orderb"><a href="http://www.baidu.com">
+		 	<div class="a1">40GB</div>
+		 	<div class="a2">42.00元</div>
+		 </div> 
+		 <div class="orderb"><a href="http://www.baidu.com">
+		 	<div class="a1">60GB</div>
+		 	<div class="a2">48.00元</div>
+		 </a></div> 
 		  
-		</script>
+		    </div>
 
-	
-	<div class="tab">
-	  <button class="tablinks" onclick="openCity(event, 'month')" id="defaultOpen">月套餐</button>
-	  <button class="tablinks" onclick="openCity(event, 'smonth')">季套餐</button>
-	  <button class="tablinks" onclick="openCity(event, 'year')">年套餐</button>
-	  <button class="tablinks" onclick="openCity(event, 'days')">加油包</button>
-	</div>
-	
-	<div id="month" class="tabcontent" class="button-sp-area">
-	 <p><a class="weui-btn weui-btn_mini weui-btn_default" href="">20G</a></p>
-	 <p><a class="weui-btn weui-btn_mini weui-btn_default" href="">40G</a></p>
-	 <p><a class="weui-btn weui-btn_mini weui-btn_default" href="">60G</a></p>
-	  <p><a class="weui-btn weui-btn_mini weui-btn_default" href="">80G</a></p>
-	</div>
-	
-	<div id="smonth" class="tabcontent" >
-	<p ><a class="weui-btn weui-btn_mini weui-btn_default" href="">20G</a></p>
-	 <p><a class="weui-btn weui-btn_mini weui-btn_default" href="">40G</a></p>
-	 <p><a class="weui-btn weui-btn_mini weui-btn_default" href="">60G</a></p>
-	  <p><a class="weui-btn weui-btn_mini weui-btn_default" href="">80G</a></p>
-	</div>
-	
-	<div id="year" class="tabcontent">
-	  <p><a class="weui-btn weui-btn_mini weui-btn_default" href="">20G</a></p>
-	   <p><a class="weui-btn weui-btn_mini weui-btn_default" href="">40G</a></p>
-	   <p><a class="weui-btn weui-btn_mini weui-btn_default" href="">60G</a></p>
-	    <p><a class="weui-btn weui-btn_mini weui-btn_default" href="">80G</a></p>
-		<p><a class="weui-btn weui-btn_mini weui-btn_default" href="">100G</a></p>
-		 <p><a class="weui-btn weui-btn_mini weui-btn_default" href="">2000G</a></p>
-		 <p><a class="weui-btn weui-btn_mini weui-btn_default" href="">300G</a></p>
-		  <p><a class="weui-btn weui-btn_mini weui-btn_default" href="">150G</a></p>
-	</div>
-	<div id="days" class="tabcontent">
-	  <p><a class="weui-btn weui-btn_mini weui-btn_default" href="">20G</a></p>
-	   <p><a class="weui-btn weui-btn_mini weui-btn_default" href="">40G</a></p>
-	   <p><a class="weui-btn weui-btn_mini weui-btn_default" href="">60G</a></p>
-	    <p><a class="weui-btn weui-btn_mini weui-btn_default" href="">80G</a></p>
-		<p><a class="weui-btn weui-btn_mini weui-btn_default" href="">100G</a></p>
-		 <p><a class="weui-btn weui-btn_mini weui-btn_default" href="">2000G</a></p>
-		 <p><a class="weui-btn weui-btn_mini weui-btn_default" href="">300G</a></p>
-		  <p><a class="weui-btn weui-btn_mini weui-btn_default" href="">150G</a></p>
-	</div>
+     <!-- 半年包 -->
+     <div style="margin:1.25rem 0 1.25rem 1.875rem">
+		  	
+		  <p><b>超值半年包</b> <span style="font-size: 8px;">到账后180天失效，可跨月</span></p>
+		  	
+		  <div class="orderb"><a href="http://www.baidu.com">
+		  	<div class="a1">20GB</div>
+		  	<div class="a2">72.00元</div>
+		  </a></div>
+		  <div class="orderb"><a href="http://www.baidu.com">
+		  	<div class="a1">40GB</div>
+		  	<div class="a2">84.00元</div>
+		  </div> 
+		  <div class="orderb"><a href="http://www.baidu.com">
+		  	<div class="a1">20GB</div>
+		  	<div class="a2">96.00元</div>
+		  </a></div> 
+		  
+		    </div>	
+				  
+				  
+			<!-- 年度包 -->
+	<div style="margin:1.25rem 0 1.25rem 1.875rem">
+					  	
+		<p><b>超值年度包</b> <span style="font-size: 8px;">到账后生效，可跨月使用</span></p>
+					  	
+			<div class="orderb"><a href="http://www.baidu.com">
+				<div class="a1">20GB</div>
+				<div class="a2">144.00元</div>
+			</a></div>
+			<div class="orderb"><a href="http://www.baidu.com">
+				<div class="a1">40GB</div>
+				<div class="a2">168.00元</div>
+			</div> 
+			<div class="orderb"><a href="http://www.baidu.com">
+				<div class="a1">60GB</div>
+				<div class="a2">192.00元</div>
+			</a></div> 
+					  
+	</div>		  
+		  <script type="text/javascript">
+		  	$('#showPhone').on('click', function () {
+		  	    weui.picker([{
+		  	        label: '14302220741',
+		  	        value: 14302220741
+		  	    }, {
+		  	        label: '14302220742',
+		  	        value: 14302220742
+		  	    }, {
+		  	        label: '14302220743',
+		  	        value: 14302220743
+		  	    }, {
+		  	        label: '14302220744',
+		  	        value: 14302220744
+		  	    }], {
+		  	        onChange: function (result) {
+		  	            console.log(result);
+		  				document.getElementById("result").innerText=result;
+		  	        },
+		  	        onConfirm: function (result) {
+		  	            console.log(result);
+		  				document.getElementById("result").innerText=result;
+		  	        },
+		  	        title: '上下滑动选择用户码'
+		  	    });
+		  	});
+		  			  
+		  </script>
 		 </body>
 </html>
