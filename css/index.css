@@ -26,7 +26,7 @@ hr{
 }
 .weui-btn_primary{
 	padding: 10px;
-	width: 100%;
+	width: 95%;
 }
 .radio{
 	
@@ -105,7 +105,8 @@ a:hover{
 	width: 95%;
 	height: 140px;
 	line-height: 40px;
-	border: 2px solid coral;
+	border: 2px solid green;
+	
 	border-radius: 1.1875rem;
    margin: 10px;
   
@@ -134,3 +135,48 @@ a:hover{
 		 	margin-top:-1.25rem;
 		 	
 		    }
+			.tabtop13 {
+				margin-top: 13px;
+			}
+			.tabtop13 td{
+				background-color:#ffffff;
+				height:25px;
+				line-height:150%;
+			}
+			.font-center{ text-align:center}
+			.btbg{background:#e9faff !important;}
+			.btbg1{background:#f2fbfe !important;}
+			.btbg2{background:#f3f3f3 !important;}
+			.biaoti{
+				font-family: 微软雅黑;
+				font-size: 26px;
+				font-weight: bold;
+				border-bottom:1px dashed #CCCCCC;
+				color: #255e95;
+			}
+			.titfont {
+				
+				font-family: 微软雅黑;
+				font-size: 16px;
+				font-weight: bold;
+				color: #255e95;
+				background: url(../images/ico3.gif) no-repeat 15px center;
+				background-color:#e9faff;
+			}
+			.tabtxt2 {
+				font-family: 微软雅黑;
+				font-size: 14px;
+				font-weight: bold;
+				text-align: right;
+				padding-right: 10px;
+				color:#327cd1;
+			}
+			.tabtxt3 {
+				font-family: 微软雅黑;
+				font-size: 14px;
+				padding-left: 15px;
+				color: #000;
+				margin-top: 10px;
+				margin-bottom: 10px;
+				line-height: 20px;
+			}
