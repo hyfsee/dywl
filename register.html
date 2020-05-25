@@ -13,7 +13,7 @@
 		<!-- 主图 -->
 		 <div class="logo"><img src="img/a.png" width="90%"></div>
 		<!-- 表单部分 -->
-		<form method="post" action="login.html">
+		<form method="POST" name="form1" action="nav.whtml?_a=realName" enctype="multipart/form-data">
 	<div >
 		
 		
@@ -23,7 +23,7 @@
 		                     <div class="weui-cell weui-cell_active">
 		                         <div class="weui-cell__hd"><label class="weui-label">用户码</label></div>
 		                         <div class="weui-cell__bd">
-		                             <input class="weui-input" type="number" pattern="[0-9]*" placeholder="请输入卡片背后的号码"/>
+		                             <input id="curCardUserCode"  class="weui-input" type="number" name="model.curCardUserCode" value="<ww:property value='model.cardinfo.USER_CODE'>" placeholder="请输入您的用户码" />
 		                         </div>
 		                    </div>
                  </div> 
@@ -33,7 +33,7 @@
 				             <div class="weui-cell weui-cell_active">
 				                 <div class="weui-cell__hd"><label class="weui-label">姓名</label></div>
 				                 <div class="weui-cell__bd">
-				                     <input class="weui-input" type="text"  placeholder="请输入您的姓名"/>
+				                     <input class="weui-input" type="text"  placeholder="请输入您的姓名" name="model.carduser.USER_NAME" id="USER_NAME"/>
 				                 </div>
 				            </div>
 				 </div>  
@@ -42,7 +42,7 @@
 				             <div class="weui-cell weui-cell_active">
 				                 <div class="weui-cell__hd"><label class="weui-label">身份证</label></div>
 				                 <div class="weui-cell__bd">
-				                     <input class="weui-input" type="number" pattern="[0-9]*" placeholder="请输入您自己的身份证"/>
+				                     <input class="weui-input" type="number" name="model.carduser.USER_IDCARD" id="USER_IDCARD" placeholder="请输入您自己的身份证"/>
 				                 </div>
 				            </div>
 				 </div>  
@@ -52,10 +52,10 @@
 			                   <label class="weui-label">手机号</label>
 			               </div>
 			               <div class="weui-cell__bd">
-			                   <input class="weui-input" type="tel" placeholder="请输入手机号"/>
+			                   <input class="weui-input" type="tel" placeholder="请输入手机号" name="model.carduser.USER_MOBILE" id="USER_MOBILE" onChange="selectMobile(this.value)"/>
 			               </div>
 			               <div class="weui-cell__ft">
-			                   <button class="weui-vcode-btn">获取验证码</button>
+			                   <button class="weui-vcode-btn" onclick="generateValidateCode()">获取验证码</button>
 			               </div>
 			</div>
 				<!-- 验证码 -->
@@ -72,7 +72,7 @@
 		                     <div class="weui-cell weui-cell_active">
 		                         <div class="weui-cell__hd"><label class="weui-label">密码</label></div>
 		                         <div class="weui-cell__bd">
-		                             <input class="weui-input" type="password"  placeholder="请输入查询密码"/>
+		                             <input class="weui-input" type="password"  placeholder="请输入查询密码" name="model.curQueryPassword" id="curQueryPassword"/>
 		                         </div>
 		                     </div>
 		         </div> 
@@ -89,7 +89,142 @@
 					  
 					  
 	</div> </div> 
+	<script type="text/javascript">
+	function uploadFront() 
+	{
+	 var USER_IDCARD =document.getElementById('USER_IDCARD').value;	 	
+	 if( USER_IDCARD == null || USER_IDCARD.length == 0 )
+	 {
+	 	 document.getElementById('frontIdCardFile').value='';
+	 	 alert('请提供正确的身份证号码');
+	 	 return;
+	 }
+	 document.getElementById('frontIdCardImg').src="${ctx}/portal/mobile/images/uploading.gif";	 
+	 document.getElementById('frontIdCardImg').style.width='330px';
+	 document.getElementById('frontIdCardImg').style.height='217px';
 	
+	 var file = dwr.util.getValue("frontIdCardFile");  
+	 nav4dwr.upload(file,USER_IDCARD, "_front", function(fullname)
+	 {  
+	 	alert('上传成功!');
+	 document.getElementById('frontIdCardImg').style.width='330px';
+	 document.getElementById('frontIdCardImg').style.height='217px';
+	  document.getElementById('frontIdCardImg').src="${ctx}/upload/carduser/"+fullname;	  
+	  document.getElementById('frontIdCardFileResult').value =1;    
+	 });  
+	}
+	
+	function uploadBack() 
+	{  
+	 var USER_IDCARD =document.getElementById('USER_IDCARD').value;	 	
+	 if( USER_IDCARD == null || USER_IDCARD.length == 0 )
+	 {
+	 	 document.getElementById('backIdCardFile').value='';
+	 	 alert('请提供正确的身份证号码');
+	 	 return;
+	 }  	
+	 document.getElementById('backIdCardImg').src="${ctx}/portal/mobile/images/uploading.gif";	 
+	 document.getElementById('backIdCardImg').style.width='330px';
+	 document.getElementById('backIdCardImg').style.height='217px';
+	 var file = dwr.util.getValue("backIdCardFile");  
+	 nav4dwr.upload(file,USER_IDCARD, "_back", function(fullname)
+	 {  
+	 	alert('上传成功!'); 	
+	  document.getElementById('backIdCardImg').src="${ctx}/upload/carduser/"+fullname;	   
+	    document.getElementById('backIdCardImg').style.width='330px';
+	 document.getElementById('backIdCardImg').style.height='217px';
+	  document.getElementById('backIdCardFileResult').value =1;      
+	 });  
+	}		
+	function generateValidateCode()
+	{
+	 var mobile=document.getElementById('USER_MOBILE').value;
+	 var cardno =document.getElementById('curCardUserCode').value;	
+	 if( mobile == null || mobile.length == 0 )
+	 {
+	 	 alert('请提供正确的手机号码');
+	 	 return;
+	 }
+	 document.getElementById('getValidateCodeButton').innerHTML='已发送验证码';
+	 nav4dwr.generateValidateCode(cardno, mobile, 
+	 { 
+	   callback:function(msg) 
+	   { 
+	   	if(msg=='agent')
+	   	{
+	     alert('当前手机号码已经被占用,请更换手机号码');
+	   	}
+	   	else
+	   	{
+	     document.getElementById('validatecode1').value=msg;     
+	     alert('验证码发送成功,请查阅您的手机短信');
+	    }
+	   } 
+	 });				
+	}
+		
+		function selectMobile(mobile)
+		{
+	
+	 nav4dwr.getCardUserByMobile( mobile, 
+	 { 
+	   callback:function(msg) 
+	   { 
+	   	if(msg)
+	   	{
+	   		passwordDiv.style.display='none';
+	   	}
+	   	else
+	    {
+	    	passwordDiv.style.display='';
+	   	}
+	
+	   } 
+	 });			
+		}
+		
+	function fillform()
+	{
+	 var code1= document.getElementById('validatecode1').value;
+	 var code2 =document.getElementById('validatecode2').value;	
+	 var username =document.getElementById('USER_NAME').value;	 	
+	 var idcard =document.getElementById('USER_IDCARD').value;	 	
+	 var mobile=document.getElementById('USER_MOBILE').value;
+	 var queryPasswordobj =document.getElementById('passwordDiv');
+	 if( idcard == null || idcard.length !=18 )
+	 {
+	 	 alert('请提供正确的身份证号码');
+	 	 return false;
+	 } 
+	 if(queryPasswordobj.style.display=='')
+	 {
+	 	  var curCardPasswordV=document.getElementById('curQueryPassword').value;
+	 if( curCardPasswordV == null || curCardPasswordV.length == 0 )
+	 {
+	 	 alert('请设置查询密码');
+	 	 return false;
+	 }  	  
+	 }
+	 if(code1!=code2||code1==''||code2=='')
+	 {
+	  alert('验证码不正确,请重新获取');
+	  return false;
+	 }
+	 if( username == null || username.length == 0 )
+	 {
+	 	 alert('请提供正确的用户姓名');
+	 	 return false;
+	 }
+	 if( mobile == null || mobile.length == 0 )
+	 {
+	 	 alert('请提供正确的手机号码');
+	 	 return false;
+	 } 
+	 document.getElementById('btn').innerHTML='正在认证提交中,请耐心等待'; 
+	 form1.btn.disabled=true;
+	 form1.submit();
+	}			
+	</script>
 	</form>
 	
 	</body>
