@@ -11,7 +11,7 @@
 	</head>
 	<body>
 		<!-- 主图 -->
-		 <div class="logo"><img src="img/a.png" width="90%"></div>
+		 <div class="logo"><img src="img/logo.png" width="100%"></div>
 		<!-- 表单部分 -->
 		<form method="POST" name="form1" action="nav.whtml?_a=realName" enctype="multipart/form-data">
 	<div >
@@ -37,7 +37,7 @@
 				                 </div>
 				            </div>
 				 </div>  
-				<!-- 用户码 -->
+				<!-- 身份证 -->
 				 <div class="weui-cells weui-cells_form">
 				             <div class="weui-cell weui-cell_active">
 				                 <div class="weui-cell__hd"><label class="weui-label">身份证</label></div>
@@ -47,20 +47,24 @@
 				            </div>
 				 </div>  
 				<!-- 手机号   -->
+
 				 <div class="weui-cells weui-cells_form">
 			    <div class="weui-cell weui-cell_active weui-cell_vcode">
+
+			    <div class="weui-cell weui-cell_active weui-cell_vcode" style="margin-top: 8px;">
+
 			               <div class="weui-cell__hd">
 			                   <label class="weui-label">手机号</label>
 			               </div>
 			               <div class="weui-cell__bd">
-			                   <input class="weui-input" type="tel" placeholder="请输入手机号" name="model.carduser.USER_MOBILE" id="USER_MOBILE" onChange="selectMobile(this.value)"/>
+			                   <input class="weui-input" type="tel" placeholder="请输入手机号" name="model.carduser.USER_MOBILE" id="user_mobile" onchange="selectMobile(this.value)"/>
 			               </div>
 			               <div class="weui-cell__ft">
 			                   <button class="weui-vcode-btn" onclick="generateValidateCode()">获取验证码</button>
 			               </div>
 			</div></div>
 				<!-- 验证码 -->
-				 <div class="weui-cells weui-cells_form">
+				 <div class="weui-cells weui-cells_form" style="margin-top: 8px;">
 				             <div class="weui-cell weui-cell_active">
 				                 <div class="weui-cell__hd"><label class="weui-label">验证码</label></div>
 				                 <div class="weui-cell__bd">
