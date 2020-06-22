@@ -17,16 +17,8 @@
 	     <body>
 			 <div class="logo"><img src="../img/header.png" width="100%"></div>
 				
-		<div class="page">
-		      <div class="weui-cells__group weui-cells__group_form">
-		        <div class="weui-cells">
-		          <div class="weui-cell weui-cell_active weui-cell_access" id="showPhone">
-		            <div class="weui-cell__bd">请选择你的用户码</div>
-		            <div class="weui-cell__ft" id="result"></div>
-		        </div>
-		      </div>
-		    </div>
-		  </div>
+		
+		     
 		  <div style="margin:1.25rem 0">
 			<!-- 月套餐 -->
 		<p style="margin:1.25rem 0 0 0.625rem"><b>超值月包</b><span style="font-size: 8px;">到账后生效，30天有效期,可跨月</span></p>
@@ -75,47 +67,11 @@
 		    </center>
 		
 		
-	 <center><div class="weui-flex">
-	            <div class="weui-flex__item">
-					
-					<div class="placeholder">
-					<div class="orderb"><a href="http://www.baidu.com">
-		            <div class="a1">20GB</div>
-		            <div class="a2">12.00元</div></a></div></div>
-		        </div>
-	            <div class="weui-flex__item">
-	            	<div class="placeholder"><div class="orderb"><a href="http://www.baidu.com">
-	                <div class="a1">20GB</div>
-	                <div class="a2">12.00元</div></a></div></div>
-	            </div>
-	           <div class="weui-flex__item">
-	           	<div class="placeholder"><div class="orderb"><a href="http://www.baidu.com">
-	               <div class="a1">20GB</div>
-	               <div class="a2">12.00元</div></a></div></div>
-	           </div>
-	          </div>
-	  </center>
-		<center><div class="weui-flex">
-		            <div class="weui-flex__item">
-						
-						<div class="placeholder">
-						<div class="orderb"><a href="http://www.baidu.com">
-			            <div class="a1">20GB</div>
-			            <div class="a2">12.00元</div></a></div></div>
-			        </div>
-		            <div class="weui-flex__item">
-		            	<div class="placeholder"><div class="orderb"><a href="http://www.baidu.com">
-		                <div class="a1">20GB</div>
-		                <div class="a2">12.00元</div></a></div></div>
-		            </div>
-		           <div class="weui-flex__item">
-		           	<div class="placeholder"></div>
-		           </div>
-		          </div>
-		  </center>
+	 
+		
 		  </div>
 		 <!-- 季度包 -->
-		  <div style="margin:1.25rem 0">
+	 <div style="margin:1.25rem 0">
 		  	
 		  <p style="margin:1.25rem 0 0 0.625rem"><b>超值季度包</b> <span style="font-size: 8px;">到账后季度有效，可跨月</span></p>
 		  	
@@ -197,33 +153,6 @@
 	  </center>
 	  
 	    </div>
-		  <script type="text/javascript">
-		  	$('#showPhone').on('click', function () {
-		  	    weui.picker([{
-		  	        label: '14302220741',
-		  	        value: 14302220741
-		  	    }, {
-		  	        label: '14302220742',
-		  	        value: 14302220742
-		  	    }, {
-		  	        label: '14302220743',
-		  	        value: 14302220743
-		  	    }, {
-		  	        label: '14302220744',
-		  	        value: 14302220744
-		  	    }], {
-		  	        onChange: function (result) {
-		  	            console.log(result);
-		  				document.getElementById("result").innerText=result;
-		  	        },
-		  	        onConfirm: function (result) {
-		  	            console.log(result);
-		  				document.getElementById("result").innerText=result;
-		  	        },
-		  	        title: '上下滑动选择用户码'
-		  	    });
-		  	});
-		  			  
-		  </script>
+		  
 		 </body>
 </html>

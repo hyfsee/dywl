@@ -210,3 +210,11 @@ a:hover{
 			.body {
 			    background-color: var(--weui-BG-0);
 			}
+			.text1{
+				    color:#A1A1A1	;
+					font-size: 12px;
+					text-align: left;
+					text-indent: 24px;
+				
+				
+			}
