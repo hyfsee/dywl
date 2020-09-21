@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+		<link href="https://res.wx.qq.com/open/libs/weui/2.3.0/weui.css" rel="stylesheet">
+		<link href="https://res.wx.qq.com/open/libs/weui/2.3.0/weui.min.css" rel="stylesheet">
+		<link href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+		<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+		<script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script src="../js/index.js"></script> 
+		<link href="../css/index.css" rel="stylesheet">
+		<title>设备详情—随身WIFI</title>
+		
+	</head>
+	<body>
+	
+		 <div class="weui-flex">
+		            <div>
+						<div class="placeholder">
+							<img src="../img/user.png" class="img-responsive img-thumbnail" width="70%" height="70%" style="margin:40px 10px 0 20px;"/>
+							
+						</div>
+					</div>
+		            <div class="weui-flex__item" style="margin-top: 30px">
+						<div class="placeholder">
+							<form>
+							<div class="weui-cells weui-cells_form">
+							          <div class="weui-cell weui-cell_active" style="padding: 6px;font-size: 12px;">
+							            <div class="weui-cell__hd"><label class="weui-label">wifi热点：</label></div>
+							            <div class="weui-cell__bd">
+							                <input id="js_input" class="weui-input" placeholder="1440813655625"/>
+							            </div>
+							          </div>
+							          <div class="weui-cell weui-cell_active" style="padding: 6px;font-size: 12px;">
+							            <div class="weui-cell__hd"><label class="weui-label">旧密码:</label></div>
+							            <div class="weui-cell__bd">
+							                <input id="js_input" class="weui-input" placeholder="abc12345"/>
+							            </div>
+							          </div>
+							          <div class="weui-cell weui-cell_active" style="padding: 6px;font-size: 12px;">
+							            <div class="weui-cell__hd"><label class="weui-label">新密码:</label></div>
+							            <div class="weui-cell__bd">
+							                <input id="js_input" class="weui-input" placeholder="******" type="password" pattern="[0-9]*" />
+							            </div>
+							          </div>
+									  
+									  </div>
+									
+							
+							</div>
+							
+						</div>
+					</div>
+		            <div>
+					</div>
+		        </div>
+		
+		  <div class="weui-flex" style="margin-top:15px;">
+			 
+		            <div class="weui-flex__item"><div class="placeholder"> <center><a href="#" class="weui-btn weui-btn_mini weui-btn_default" style="color:#FFFFFF ;background-color: #06ae56;line-height: 1.5;">隐藏热点</a> </center></div></div>
+		          
+		            <div class="weui-flex__item"><div class="placeholder"> <center><input type="submit" class="weui-btn weui-btn_mini weui-btn_default" value="保存信息" style="color:#FFFFFF ;background-color: #06ae56;line-height: 1.5;"/></center></div></div>
+		      
+				</div>
+		
+		</form>
+		
+		
+	
+	 
+
+		<!--状态明细 -->
+   <div class="weui-panel weui-panel_access">
+         
+			<div class="page" style="margin: 8PX;border: #F6F6F6 solid 2PX;border-radius: 5PX;padding: 10PX;">
+			  <center>
+			   
+			        <div class="weui-flex">
+			            <div class="weui-flex__item"><div class="placeholder">信号强度</div></div>
+			            <div class="weui-flex__item"><div class="placeholder">剩余电量</div></div>
+			            <div class="weui-flex__item"><div class="placeholder">连接数量</div></div>
+			        </div>
+			        <div class="weui-flex" style="line-height: 30px; padding: 10px;">
+			            <div class="weui-flex__item"><div class="placeholder" >4<img align="absmiddle"  src="../img/xinhao.png" width="25px" height="25px"/></div></div>
+			            <div class="weui-flex__item"><div class="placeholder">78%<img align="absmiddle" src="../img/dianchi.png" width="25px" height="25px"/></div></div>
+			            <div class="weui-flex__item"><div class="placeholder">3<img align="absmiddle" src="../img/mifi.png" width="25px" height="25px"/></div></div>
+			        </div>
+			        
+			   
+				</center>
+			</div>
+        </div>
+		<!-- 用量统计 -->
+		<div class="weui-panel weui-panel_access">
+		        <div class="page" style="margin-top: 15px;">
+		          <center>
+		           
+		                <div class="weui-flex">
+		                    <div class="weui-flex__item"><div class="placeholder">当日用量</div></div>
+		                    <div class="weui-flex__item"><div class="placeholder">本月用量</div></div>
+		                    <div class="weui-flex__item"><div class="placeholder">截止天数</div></div>
+		                </div>
+		                <div class="weui-flex" style="line-height: 30px; padding: 5px;">
+		                    <div class="weui-flex__item"><div class="placeholder" >21483M</div></div>
+		                    <div class="weui-flex__item"><div class="placeholder">314251M</div></div>
+		                    <div class="weui-flex__item"><div class="placeholder">24天</div></div>
+		                </div>
+		                
+		          
+		        	</center>
+		        </div>
+		        
+		     </div>
+			 
+			 
+			 
+			 
+			 
+			 
+		<!-- 切换线路 -->
+		
+		<div class="weui-panel weui-panel_access">
+		        <div class="page" style="margin-top: 5px;">
+		      
+		        <p class="page__desc" style="margin-left: 1.625rem;"><b>切换线路</b><span style="font-size: 0.6rem; margin-left: 0.625rem;">如当前网络差，可点击以下切换线路</span></p>
+		    </div>
+		    <div class="weui-grids">
+		        <a href="result.html" class="weui-grid"  id="dianxin2" >
+		            <div class="weui-grid__icon">
+		                <img src="../img/dianxin.png" alt="" id="dianxini">
+		            </div>
+		            <p class="weui-grid__label" id="aa" >切换至电信</p>
+		        </a>
+		        <a href="#" class="weui-grid" id="liantong2" >
+		            <div class="weui-grid__icon">
+		                <img src="../img/liantong.png" alt="">
+		            </div>
+		            <p class="weui-grid__label" id="demo">切换至联通</p>
+		        </a>
+		          <a href="#" class="weui-grid" id="yidong2">
+		              <div class="weui-grid__icon">
+		                  <img src="../img/moblie.png" alt="">
+		              </div>
+		              <p class="weui-grid__label">切换至移动</p>
+		          </a>
+		    </div>
+		</div>
+						
+			
+	
+		  <div class="page__bd page__bd_spacing" style="margin-top: 55px;">
+		        <div class="weui-footer weui-footer_fixed-bottom">
+					
+		            <p class="weui-footer__text">Copyright &copy; 2008-2020 dingyinkj</p>
+		        </div>
+			</div>	
+		
+			
+			<script type="text/javascript">
+			    $(function(){
+			        var $Dialog = $('#Dialog'),
+					    $yi = $('#Yidong'),
+					    $lian = $('#Liantong'),
+					    $dian = $('#Dianxin');
+			           
+			        $('#dialogs').on('click', '.weui-dialog__btn', function(){
+			            $(this).parents('.js_dialog').fadeOut(200);
+			        });
+			
+			      
+			        $('#Dialog2').on('click', function(){
+			            $Dialog.fadeIn(200);
+			        });
+				
+			    });
+			
+				
+			</script>
+<!-- 以下为样式	 --> 
+				
+<script>
+
+		document.getElementById("aa").innerHTML="当前为电信";
+		document.getElementById("aa").style.color="#8c8c8c";
+		document.getElementById("dianxin2").removeAttribute("href");
+		document.getElementById("dianxini").src="../img/dianxin1.png";
+			
+				
+			</script>
+</html>
