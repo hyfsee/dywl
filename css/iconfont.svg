@@ -1,0 +1,29 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<!--
+2013-9-30: Created.
+-->
+<svg>
+<metadata>
+Created by iconfont
+</metadata>
+<defs>
+
+<font id="iconfont" horiz-adv-x="1024" >
+  <font-face
+    font-family="iconfont"
+    font-weight="500"
+    font-stretch="normal"
+    units-per-em="1024"
+    ascent="896"
+    descent="-128"
+  />
+    <missing-glyph />
+    
+    <glyph glyph-name="jurassic_last" unicode="&#59036;" d="M64 384c0-247 201-448 448-448s448 201 448 448S759 832 512 832 64 631 64 384z m64 0c0 211.8 172.2 384 384 384s384-172.2 384-384-172.2-384-384-384-384 172.2-384 384zM548.6 608.1L376.3 448H768v-64H376.4l172.2-160.1-39-41.9-251.7 234.1L509.6 650z"  horiz-adv-x="1024" />
+
+    
+
+
+  </font>
+</defs></svg>

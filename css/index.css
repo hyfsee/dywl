@@ -272,4 +272,19 @@ a:hover{
 			 margin-top:4px;
 			
 			｝
-		
+	@font-face {
+	  font-family: 'iconfont';
+	  src: url('../iconfont.eot');
+	  src: url('../css/iconfont.eot?#iefix') format('embedded-opentype'),
+	      url('../css/iconfont.woff2') format('woff2'),
+	      url('../css/iconfont.woff') format('woff'),
+	      url('../css/iconfont.ttf') format('truetype'),
+	      url('../css/iconfont.svg#iconfont') format('svg');
+	}
+	.iconfont {
+	  font-family: "iconfont" !important;
+	  font-size: 26px;
+	  font-style: normal;
+	  -webkit-font-smoothing: antialiased;
+	  -moz-osx-font-smoothing: grayscale;
+	}
